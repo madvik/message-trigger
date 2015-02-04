@@ -1,5 +1,5 @@
 === Message Trigger ===
-Contributors: bravokeyl
+Contributors: bravokeyl, madvic
 Requires at least: 3.6
 Tested up to: 3.8.1
 Stable tag: 1.0
