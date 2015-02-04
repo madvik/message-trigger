@@ -20,14 +20,17 @@
 	function mt_header(){
 		$mt_options = get_option('mt_plugin_options');
 		$mt_option_value = $mt_options['mt_head_message'];
-		echo '<div id="message-trigger-header">'.$mt_option_value.'</div>';
+		if( !empty($mt_option_value ) ){
+			echo '<div id="message-trigger-header">'.$mt_option_value.'</div>';
+		}
 	}
 
 	function mt_footer(){
 		$mt_options = get_option('mt_plugin_options');
 		$mt_option_value = $mt_options['mt_foot_message'];
-		echo '<div id="message-trigger-footer">'.$mt_option_value.'</div>';
-		
+		if( !empty($mt_option_value ) ){
+			echo '<div id="message-trigger-footer">'.$mt_option_value.'</div>';
+		}
 	}
 
 ?>
