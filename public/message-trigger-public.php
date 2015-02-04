@@ -9,7 +9,7 @@
 
 	function mt_add_message($content){
 		$output = $content;
-		$output .= '<div id="message-trigger-post">'.get_post_meta(get_the_ID(),'_mt_message_key',true).'</div>';
+		$output .= '<div id="message-trigger-post" class="notification info canhide">'.do_shortcode( get_post_meta(get_the_ID(),'_mt_message_key',true) ) .'</div>';
 		return $output;
 	}
 
@@ -21,7 +21,7 @@
 		$mt_options = get_option('mt_plugin_options');
 		$mt_option_value = $mt_options['mt_head_message'];
 		if( !empty($mt_option_value ) ){
-			echo '<div id="message-trigger-header">'.$mt_option_value.'</div>';
+			echo '<div id="message-trigger-header" class="notification info canhide">'.do_shortcode($mt_option_value).'</div>';
 		}
 	}
 
@@ -29,7 +29,7 @@
 		$mt_options = get_option('mt_plugin_options');
 		$mt_option_value = $mt_options['mt_foot_message'];
 		if( !empty($mt_option_value ) ){
-			echo '<div id="message-trigger-footer">'.$mt_option_value.'</div>';
+			echo '<div id="message-trigger-footer" class="notification info canhide">'.do_shortcode($mt_option_value).'</div>';
 		}
 	}
 
