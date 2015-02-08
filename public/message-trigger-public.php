@@ -9,7 +9,10 @@
 
 	function mt_add_message($content){
 		$output = $content;
-		$output .= '<div id="message-trigger-post" class="notification info canhide">'.do_shortcode( get_post_meta(get_the_ID(),'_mt_message_key',true) ) .'</div>';
+		$mt_post_option_value = get_post_meta(get_the_ID(),'_mt_message_key',true);
+		if( !empty( $mt_post_option_value ) ){
+		$output .= '<div id="message-trigger-post" class="notification info canhide">'.do_shortcode( $mt_post_option_value ) .'</div>';
+		}
 		return $output;
 	}
 
