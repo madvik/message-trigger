@@ -1,8 +1,8 @@
 === Message Trigger ===
 Contributors: bravokeyl, madvic
 Requires at least: 3.6
-Tested up to: 3.8.1
-Stable tag: 1.0
+Tested up to: 4.4
+Stable tag: 1.1
 License: GPL V2 or Later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -20,5 +20,12 @@ Using this plugin we can easily add notifications/messages at the top / bottom /
 
 
 == Changelog ==
-1.0
-Initial Commit
+1.0 Initial Commit
+
+1.1 
+- Restructuring of the code
+- Change the default <html> tag
+- Add id to the information
+- Don't display the message if it is empty
+- The message is translate by shortcode
+- Add A switch button for activate or not the feature
