@@ -5,7 +5,7 @@
  * @since      1.0
  * @package    message-trigger
  * @subpackage message-trigger/admin
- * @author     Bravokeyl
+ * @author     Bravokeyl, madvic
  */
 	class MT_MessageTrigger {
 
@@ -49,6 +49,7 @@
 			$mt_message_value = sanitize_text_field( $_POST['mt_message'] );
 
 			update_post_meta( $post_id, '_mt_message_key', $mt_message_value );
+
 		}
 
 		public function mt_meta_box_display( $post ) {

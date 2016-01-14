@@ -4,7 +4,12 @@
  * @package    message-trigger
  * @subpackage message-trigger/public
  */
- 
+
+$mt_options = get_option('mt_plugin_options');
+$mt_active = $mt_options['mt_active'];
+
+if( 'on' == $mt_active ){
+
 	add_filter('the_content','mt_add_message');
 
 	function mt_add_message($content){
@@ -35,5 +40,7 @@
 			echo '<div id="message-trigger-footer" class="notification info canhide">'.do_shortcode($mt_option_value).'</div>';
 		}
 	}
+
+} //end condition
 
 ?>
