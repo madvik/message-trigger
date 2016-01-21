@@ -54,10 +54,12 @@
 
 	function mt_activate(){
 		$mt_options = get_option('mt_plugin_options');
-		$mt_active = $mt_options['mt_active'];
 		$checked = '';
-		if('on' == $mt_active){
+		if( isset( $mt_options['mt_active'] ) && 'on' == $mt_options['mt_active'] ){
 			$checked = 'checked';
+		}
+		else{
+			$mt_active = null;
 		}
 		?>
 		<div class="onoffswitch">
